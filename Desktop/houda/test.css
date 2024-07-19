@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto Slab', serif; /* Utilisation du nouveau style de police */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#caedcf;
+    margin: 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px; /* Ajuster la largeur maximum */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto; /* Centrer horizontalement */
+    margin-top: 50px; /* Éloigner du haut de la page */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 33.33%; /* 100% / 3 images = 33.33% par image */
+    box-sizing: border-box;
+    background-color:#abedad;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 540px; /* Hauteur uniforme pour les images */
+    margin-right: 10px; /* Ajouter de l'espace entre les images */
+    position: relative;
+    border:1px solid white;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Ajuster la taille de l'image sans déformer */
+    border-radius: 10px 10px 0 0;
+}
+
+.text-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent pour le texte */
+    padding: 15px; /* Ajouter un peu plus d'espace autour du texte */
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.carousel-item h3, .carousel-item p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.carousel-item h3 {
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+.carousel-item p {
+   font-size: 20px;
+   color: rgb(2, 13, 1);
+   text-align: center;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Supprimer la couleur de fond */
+    border: none; /* Supprimer les bordures */
+    color: rgb(10, 32, 1);
+    font-size: 60px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: -1%;
+}
+
+.carousel-button.next {
+    right: -1%;
+}
